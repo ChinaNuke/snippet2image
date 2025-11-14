@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Test outputs
+*.html
+*.svg
+
+# Except demo files
+!demos/demo.html
+!demos/demo.svg

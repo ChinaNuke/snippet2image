@@ -1,0 +1,11 @@
+[project]
+name = "snippet2image"
+version = "0.1.0"
+description = "Convert code snippets to SVG or HTML with syntax highlighting and line numbers"
+requires-python = ">=3.13"
+dependencies = [
+    "pygments>=2.19.2",
+]
+
+[project.scripts]
+snippet2image = "snippet2image:main"

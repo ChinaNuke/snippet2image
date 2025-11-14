@@ -1,0 +1,20 @@
+<div class="highlight" style="background: transparent"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre style="line-height: 125%;"><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">fibonacci</span><span style="color: #F8F8F2">(n):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Generate Fibonacci sequence.&quot;&quot;&quot;</span>
+    <span style="color: #F8F8F2">a,</span> <span style="color: #F8F8F2">b</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">1</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">_</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">range(n):</span>
+        <span style="color: #66D9EF">yield</span> <span style="color: #F8F8F2">a</span>
+        <span style="color: #F8F8F2">a,</span> <span style="color: #F8F8F2">b</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">b,</span> <span style="color: #F8F8F2">a</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">b</span>
+
+<span style="color: #959077"># Example usage</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">num</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">fibonacci(</span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">):</span>
+    <span style="color: #F8F8F2">print(num)</span>
+</pre></div></td></tr></table></div>
