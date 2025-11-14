@@ -59,7 +59,7 @@ uv run python snippet2image.py --list-styles
 
 Popular themes: `monokai`, `github-dark`, `dracula`, `one-dark`, `vim`, `solarized-dark`
 
-Preview themes at: https://pygments.org/demo/
+Preview themes at: https://pygments.org/styles/
 
 ## Examples
 
