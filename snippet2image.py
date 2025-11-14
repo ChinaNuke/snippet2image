@@ -168,6 +168,22 @@ def code_to_image(code, output_file, format_type='svg', language=None,
         # Generate SVG
         content = highlight(code, lexer, formatter)
 
+        # Add width, height, and viewBox for proper display in image viewers
+        line_count = len(code.split('\n'))
+        longest_line = max(len(line) for line in code.split('\n'))
+
+        # Calculate width based on code content
+        # For monospace fonts: char_width ≈ 0.6 * font_size
+        # Line numbers are at x=76, so: line_number_area + (chars * char_width) + padding
+        char_width = font_size * 0.6
+        svg_width = 76 + int(longest_line * char_width) + 40  # line numbers + code + right padding
+        svg_height = line_count * (font_size + 5) + 20  # ystep + padding
+
+        content = content.replace(
+            '<svg xmlns="http://www.w3.org/2000/svg">',
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}">'
+        )
+
         # Add line highlights if specified
         if highlight_lines:
             content = add_svg_highlights(content, highlight_lines, highlight_color)
